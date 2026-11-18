@@ -1,9 +1,11 @@
-const CACHE_NAME = 'loxcheck-v83';
+const CACHE_NAME = 'loxcheck-v84';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './vendor/jspdf.umd.min.js',
+  './vendor/pdf-lib.min.js',
+  './fiche_officielle.pdf',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-192-maskable.png',
@@ -29,7 +31,7 @@ self.addEventListener('activate', (event) => {
 // Strategy:
 // - HTML page (navigation): network-first, so the latest version always shows
 //   when online; falls back to cache when offline.
-// - Other assets (jsPDF, icons): cache-first for speed and offline use.
+// - Other assets (jsPDF, pdf-lib, fiche officielle, icons): cache-first for speed and offline use.
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   const isHTML = req.mode === 'navigate' ||

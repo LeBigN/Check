@@ -10,7 +10,9 @@ fonctionne hors-ligne une fois ouverte au moins une fois.
 - `manifest.json` — nom, icône, couleurs de l'app installée
 - `service-worker.js` — permet le fonctionnement hors-ligne
 - `icons/` — icônes de l'app
-- `vendor/jspdf.umd.min.js` — génération de PDF, embarquée en local
+- `vendor/jspdf.umd.min.js` — génération du PDF devis, embarquée en local
+- `vendor/pdf-lib.min.js` — remplissage de la fiche PV officielle, embarqué en local (repli CDN)
+- `fiche_officielle.pdf` — fiche officielle LOXAM MODULE (F2-14 / 2011) remplie par l'app
 
 ## Héberger gratuitement avec GitHub Pages (10 minutes, sans rien installer)
 
